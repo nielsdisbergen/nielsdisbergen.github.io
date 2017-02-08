@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title> Niels R. Disbergen - Blog </title>
+
+  <!-- CSS  Loc, Dist -->
+  <link href="../../css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../../css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../../css/prettify/tomorrow-night-eighties.css" type="text/css" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+</head>
+
+<body onload="prettyPrint()">
+
+  <nav class="mintgreen" role="navigation">
+
+    <ul id="code-dev-dsk" class="dropdown-content">
+      <li><a href="../projects.html">Projects</a></li>
+      <li><a href="../snippets.html">Snippets</a></li>
+      <li><a href="../code/misc-code.html">Misc</a></li>
+      <li><a href="http://github.com/nielsdisbergen">GitHub<i class="fa fa-github" style="font-size:28px;color:teal"></i></a></li>
+    </ul>
+
+    <ul id="code-dev-mob" class="dropdown-content">
+      <li><a href="../projects.html">Projects</a></li>
+      <li><a href="../snippets.html">Snippets</a></li>
+      <li><a href="../code/misc-code.html">Misc</a></li>
+      <li><a href="http://github.com/nielsdisbergen">GitHub</a></li>
+    </ul>
+
+    <div class="nav-wrapper container">
+
+      <a class="white-text" href="../../index.html"><i class="material-icons left" style="font-size:25px">account_balance</i></a>
+      <a class="white-text" href="../../index.html">Niels R. Disbergen</a>
+
+      <ul class="right hide-on-med-and-down">
+        <li><a class="white-text" href="../about-me.html">About Me</a></li>
+        <li><a class="white-text" href="../blog_main.html">Blog</a></li>
+        <li><a class="white-text dropdown-button" href="#" data-activates="code-dev-dsk">Codes<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="white-text" href="../misc-content.html">Misc Content</a></li>
+        <li><a class="white-text" href="../links.html">Links</a></li>
+        <li><a class="white-text" href="../contact.html">Contact</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav teal">
+        <li><a class="white-text" href="../about-me.html">About Me</a></li>
+        <li><a class="white-text" href="../blog_main.html">Blog</a></li>
+        <li><a class="white-text dropdown-button" href="#" data-activates="code-dev-mob">Codes<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="white-text" href="../misc-content.html">Misc Content</a></li>
+        <li><a class="white-text" href="../links.html">Links</a></li>
+        <li><a class="white-text" href="../contact.html">Contact</a></li>
+      </ul>
+
+      <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i class="material-icons" style="font-size:24px;">menu</i></a>
+
+    </div>
+  </nav>
+
+  <div class="brown-text container">
+    <div class="section">
+
+      <div class="left">
+        <h3 class="left">Using Source Code Syntax Highlighting</h3>
+      </div>
+
+      <div class="row">
+
+        <div class="col s12 left">
+          <h6 class="left" style="font-size:9pt"><em>Posted 10 December 2016</em></h6>
+          <br><br>
+          <p>
+            Syntax highlighting is one of the basics to be implemented on web pages featuring some form of source code displaying. There are many different ways to implement such color-coding and formatting, I will have a brief look at several options though mainly focus on Google's <a class="orange-text" href = "https://github.com/google/code-prettify" target="_blank"><i class="fa fa-github" style="font-size:12pt"></i> Code Prettifier</a>.
+          </p>
+          <br>
+
+          <h4>Webapp</h4>
+          <p>
+            Converting (short) code snippets into pretty-printed copy-paste HTML can be achieved very easilly using the <a class="orange-text" href="http://hilite.me" target="_blank">hilite.me </a> webapp. Simply copy your source code in the input box, set the language, adjust style and line-number inclusion if you desire, and hit the "Highlight!" button to generate that pretty code and get and instant preview. 'Simply' copy-paste HTML or CSS into your page and you are ready to go.
+          </p>
+          <br>
+
+          <h4>JavaScript based</h4>
+            <p>
+              Several packages are available to perform code highligting, among which <a class="orange-text" href=https://highlightjs.org target="_blank">highlight.js</a>, which turned 10 in August 2016. Many different languages are supported and styles available, combined with automatic language detection and multi-language highligting capabilities. Even though highlight.js is a very nice package, my personal preference goes to Google's <a class="orange-text" href = "https://github.com/google/code-prettify" target="_blank"><i class="fa fa-github" style="font-size:12pt"></i> Code Prettifier</a>. Overall it is very fast, well implemented, supports many languages and styles, is easilly served, and styles can be created and managed nicely via CSS.
+            </p>
+
+              <h5>Prettify auto-loader</h5>
+              <p>
+              Prettify's CSS and JavaScript can be quickly loaded on the fly by placing the auto-loader in your script section, just before the <code>body</code> end
+              <pre class="prettyprint lang-html" style="center-align">    &lt;script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"&gt;&lt;/script&gt
+  &lt/body&gt</pre>
+
+              It is possible to provide options as arguments, for example styling code with their Desert skin and forcing html
+              <pre class="prettyprint lang-html" style="center-align">  &ltscript src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&ampamp;skin=desert">&lt/script></pre>
+              </p>
+
+              <p>
+              After adding the auto-loader, using Prettify becomes as simple as classing a <code>&ltpre></code>, <code>&ltcode></code>, or <code>&ltxmp></code> with prettyprint and the prettyprinter will do all the magic
+
+              <pre class="prettyprint" style="center-align">
+  &ltpre class="prettyprint">
+        &lt!--body goes here-->
+  &lt/pre>    </pre>
+              </p>
+
+
+              <h5>Prettify serving</h5>
+              <p>
+                Serving prettify requires a little more effort and code, on the upside it is (most of the times) faster and allows tweaking of styles and code where desired. Aside from source files, prettify only needs the JavaScript and CSS which is employed in the pretty print class text, hence serving of a sub-set is possible. If, for example, you want to serve LaTeX only code with standard styling, the minimum Prettify set would be <code>run_prettify.js</code>, <code>prettify.js</code>, <code>lang-latex.js</code>, and <code>prettify.css</code>
+              </p>
+
+              <p>
+                In order to get a hosted version running, a few further declarations will have to be made. First, linking the JavaScript prettify.js file in the script section just before the body end:
+                <pre class="prettyprint" style="center-align">  &ltscript type="text/javascript" src="prettify.js">&lt/script>
+&lt/body&gt</pre>
+
+              </p>
+
+              <p>
+                Next, link the desired CSS file to your HTML in the header section. Linking prettify.css will result in default color formatting; in case you would like to make use of any other theme, simply link your CSS of choice instead. <pre class="prettyprint" style="center-align">  &ltlink href="prettify.min.css" type="text/css" rel="stylesheet"/></pre>
+
+                Some great Prettify color themes can be found on <a href="https://jmblog.github.io/color-themes-for-google-code-prettify" class="orange-text" target="_blank">Yoshihide Jimbo's</a> blog, this page, for example, has been formatted with the tomorrow-night-eighties theme found there.
+              </p>
+
+              <p>
+                When your webpage finished loading, the <code>prettyPrint</code> function needs to be ran; one possibility is to declare this via the <code>onload</code> handler in the body header:
+                <pre class="prettyprint" style="center-align">  &ltbody onload="prettyPrint()"></pre>
+              </p>
+
+              <p>
+              More detailed information can be found on the <a class="orange-text" href = "https://github.com/google/code-prettify" target="_blank"><i class="fa fa-github" style="font-size:12pt"></i> Prettify Github</a>, or for a more general guide have a look at this <a href=http://rahularora.net/google-code-prettify/ class="orange-text" target="-_blank">blog post</a>. <br> Happy pretty-printing!
+              </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <footer class="page-footer">
+    <div class="container">
+
+        <div class="col l12 s12 center">
+
+          <a href="http://github.com/nielsdisbergen" target="_blank">
+            <i class="fa fa-github" style="font-size:48px;color:black"></i>
+          </a>
+
+          <a href="http://www.linkedin.com/in/nielsdisbergen" target="_blank">
+            <i class="fa fa-linkedin-square" style="font-size:48px;color:black"></i>
+          </a>
+
+          <a href="http://www.maastrichtuniversity.nl/niels.disbergen" target="_blank">
+            <i class="fa fa-user" style="font-size:48px;color:black"></i>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-copyright center">
+      <div class="container">
+      Niels Disbergen &#169 2016 - All Rights Reserved - Hosted on <a class="white-text" href="https://pages.github.com/" target="blank"> Github Pages and </a> Built With <a class="white-text" href="http://materializecss.com" target="blank"> Materialize </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../../js/materialize.js"></script>
+  <script src="../../js/init.js"></script>
+  <script type="text/javascript" src="../../js/prettify/prettify.js"></script>
+
+  </body>
+</html>

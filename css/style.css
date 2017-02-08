@@ -14,12 +14,20 @@ p {
   line-height: 2rem;
 }
 
+.mintgreen {
+  background-color: rgb(26, 198, 148);
+}
+
+.mintgreen-text {
+  color: rgb(26, 198, 148);
+}
+
 .button-collapse {
   color: #26a69a;
 }
 
 .parallax-container {
-  min-height: 380px;
+  min-height: 190px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
@@ -53,9 +61,14 @@ p {
 
 footer.page-footer {
   margin: 0;
-
+  background-color: rgb(26, 198, 148);
 }
 
 footer.page-footer .footer-copyright{
     color: rgb(235, 235, 235);
+    background-color: rgb(26, 198, 148);
+}
+
+.verticalLine {
+    border-left: thick solid #ff0000;
 }

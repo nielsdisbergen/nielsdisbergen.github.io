@@ -5,29 +5,57 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title> Brains Software </title>
+  <title> Niels R. Disbergen </title>
 
   <!-- CSS  Loc, Dist -->
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" alt="font/material-design-icons" rel="stylesheet">
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-
 </head>
 
 <body>
 
-  <nav class="teal" role="navigation">
+  <nav class="mintgreen" role="navigation">
+
+    <ul id="code-dev-dsk" class="dropdown-content">
+      <li><a href="content/projects.html">Projects</a></li>
+      <li><a href="content/snippets.html">Snippets</a></li>
+      <li><a href="content/code/misc-code.html">Misc</a></li>
+      <li><a href="http://github.com/nielsdisbergen">GitHub<i class="fa fa-github" style="font-size:28px;color:teal"></i></a></li>
+    </ul>
+
+    <ul id="code-dev-mob" class="dropdown-content">
+      <li><a href="content/projects.html">Projects</a></li>
+      <li><a href="content/snippets.html">Snippets</a></li>
+      <li><a href="content/code/misc-code.html">Misc</a></li>
+      <li><a href="http://github.com/nielsdisbergen">GitHub</a></li>
+    </ul>
+
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">
-      </a>
+
+      <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i class="material-icons" style="font-size:24px;">menu</i></a>
+
+      <a class="white-text" href="index.html"><i class="material-icons left" style="font-size:25px">account_balance</i></a>
+      <a class="white-text" href="index.html">Niels R. Disbergen</a>
 
       <ul class="right hide-on-med-and-down">
+        <li><a class="white-text" href="content\about-me.html">About Me</a></li>
+        <li><a class="white-text" href="content\blog_main.html">Blog</a></li>
+        <li><a class='white-text dropdown-button' href='#' data-activates='code-dev-dsk'>Codes<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="white-text" href="content\misc-content.html">Misc Content</a></li>
+        <li><a class="white-text" href="content\links.html">Links</a></li>
+        <li><a class="white-text" href="content\contact.html">Contact</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav teal">
+        <li><a class="white-text" href="content\about-me.html">About Me</a></li>
+        <li><a class="white-text" href="content\blog_main.html">Blog</a></li>
+        <li><a class='white-text dropdown-button' href='#' data-activates='code-dev-mob'>Codes<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="white-text" href="content\misc-content.html">Misc Content</a></li>
+        <li><a class="white-text" href="content\links.html">Links</a></li>
+        <li><a class="white-text" href="content\contact.html">Contact</a></li>
       </ul>
 
     </div>
@@ -37,39 +65,111 @@
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
-        <br><br>
-        <h1 class="header center text-lighten-2">Under Construction</h1>
+            <h3 class="header center ">Welcome</h3>
+            <h4 class="header center"><a class = "orange-text"; href="http://en.wikipedia.org/wiki/Infinite_loop" target="_blank"><i style = "font-size:45px" class="material-icons">all_inclusive</i></a></h4>
+      </div>
+    </div>
+    <div class="parallax"><img src="backgrounds\bars_small.jpg" alt="Unsplashed background img 1"></div>
+
+  </div>
+
+  <div class="container">
+      <div class="section">
+
+        <div class="row">
+
+            <div class="col s12 m6">
+              <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons">directions_bike</i></h2>
+                <h5 class="center"> Who </h5>
+                <p class="light">
+                    A Neuroscientist by training with a great interest in and fascination for software development and technology. Currently
+                    a doctoral (PhD) candidate at the Brain Imaging Center of Maastricht University (<a class="brown-text" href="https://www.maastrichtuniversity.nl/research/institutes/maastricht-brain-imaging-center" target="blank">MBIC</a>), working on sound processing in the human brain. More specifically, investigating how the brain separates sounds in an environment where multiple sounds are presented simultaneously. For my research I make use of ultra-high field functional Magnetic Resonance Imaging at 7 Tesla combined with advanced data analysis techniques such as machine learning. For a more detailed description see <a class="brown-text" href="content\bio-full.html">my longer biography</a>.
+                  </p>
+              </div>
+            </div>
+
+
+            <div class="col s12 m6">
+              <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons">filter_drama</i></h2>
+                <h5 class="center"> Why Brains </h5>
+                <p class="light">
+                  Brains are fascinating in many ways, they are so much more than merely fantastically efficient processing units. Understanding how brains work will most probably increase our understanding of many processes on the way. One of the main obstacles to understanding brains is not so much a technical one, for the time being it is more philosophical: can the being itself understand how its self operates? Maybe the only way to understand the mechanisms would be by virtue of developing 'artificial intelligence' capable of surpassing our levels of understanding and able to express their 'knowledge' in dimensions we can grasp...
+                </p>
+              </div>
+            </div>
+        </div>
 
       </div>
     </div>
-    <div class="parallax"><img src="backgrounds\bars.jpg" alt="Unsplashed background img 1"></div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">Developing Towards Neuro-Inspired Algorithms</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="backgrounds\bars_small.jpg" alt="Unsplashed background img 3"></div>
   </div>
 
-  <footer class="page-footer deep-orange">
+    <div class="container">
+      <div class="section">
+
+        <div class="row">
+          <div class="col s12 center">
+            <h4 class="brown-text"></h4>
+            <p class="light">
+
+              Software is an inherent part of most people's life, which is no different in the greater part of modern scientific disciplines.
+              Without software combined with scientific minds and computational power, virtually no scientific applications could have been developed. Employing any data analysis method does not merely require computational strength, it strongly calls for appropriately built software. Developing scientific software is not about producing large chunks of code which merely work and others can somehow employ, it needs reliable, stable, and fast code which is not only properly developed, but also rigorously checks data and properly handles exceptions where applicable. The further scientific analysis methods progress, the less they can be grasped by those working at more applied, less technical levels, the more need for good software increases. One of my professional interests lies exactly there, in building software which helps others excel in their scientific/professional environment by being able to focus on tasks other than (re-)writing code themselves for processes which can very well be automated.
+
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+   <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h4 class="header center"><a class = "orange-text"; href="http://en.wikipedia.org/wiki/Infinite_loop" target="_blank"><i style = "font-size:45px" class="material-icons">all_inclusive</i></a></h4>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="backgrounds\bars_small.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <footer id="footer" class="page-footer">
     <div class="container">
       <div class="row">
 
         <div class="col l12 s12 center">
 
           <a href="http://github.com/nielsdisbergen" target="_blank">
-            <i class="fa fa-github" style="font-size:48px;color:black"></i>
+            <i class="fa fa-github fa-fw" style="font-size:40px;color:black"></i>
           </a>
 
           <a href="http://www.linkedin.com/in/nielsdisbergen" target="_blank">
-            <i class="fa fa-linkedin-square" style="font-size:48px;color:black"></i>
+            <i class="fa fa-linkedin-square fa-fw" style="font-size:40px;color:black"></i>
           </a>
 
           <a href="http://www.maastrichtuniversity.nl/niels.disbergen" target="_blank">
-            <i class="fa fa-user" style="font-size:48px;color:black"></i>
+            <i class="fa fa-user fa-fw" style="font-size:40px;color:black"></i>
           </a>
-
 
         </div>
       </div>
     </div>
+
     <div class="footer-copyright center">
       <div class="container">
-      Niels Disbergen &#174 2016 - All Rights Reserved: This site is Hosted on <a class="white-text" href="https://pages.github.com/"> Github Pages and </a> built on <a class="white-text" href="http://materializecss.com"> Materialize </a>
+      Niels Disbergen &#169 2016 - All Rights Reserved - Hosted on <a class="white-text" href="https://pages.github.com/" target="blank"> Github Pages and </a> Built With <a class="white-text" href="http://materializecss.com" target="blank"> Materialize </a>
       </div>
     </div>
   </footer>

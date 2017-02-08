@@ -1,2 +1,2 @@
 # nielsdisbergen.github.io
-github-page
+github-page linked from www.nielsdisbergen.net
